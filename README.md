@@ -1,19 +1,16 @@
-# Reddit picture live slideshow
+# Reddit pictures slideshow for Raspberry PI
 
-Continuous slideshow of reddit pictures from your favorite subreddits. For your desktop or raspberry PI. Requires python 2 or 3 and the following external library dependencies:
- - shutil
- - requests
- - BeautifulSoup
- - Pillow
- - pyglet
-You may want to create a virtual environment to install them in. After downloading this repository, the installation can be done with pip. On Unix systems you can do
+Continuous slideshow of reddit pictures from your favorite subreddits. For your desktop or raspberry PI. Requires python 2 or 3 and the following external library dependencies: `shutil, requests, beautifulsoup4, Pillow, and pyglet`.
+
+You may want to create a virtual environment to install them in. After [downloading this repository](https://github.com/agalea91/reddit-slideshow-ras-pi/archive/master.zip), the installation can be done with pip. On Unix systems you can do
 ```
-git clone (finish)
-cd (finish)
+git clone https://github.com/agalea91/reddit-slideshow-ras-pi
+cd reddit-slideshow-ras-pi
 pip install --upgrade -r requirement.txt
 ```
+If on Windows, you can install the libraries by navigating to the downloaded repository and running the final line above.
 
-The tool should be run in two steps. First navigate to the project directory and run
+The tool, which downloads pictures from reddit and then displays them in a slideshow, should be run in two steps. First navigate to the project directory and run
 ```
 python get_reddit_images.py
 ```
@@ -28,14 +25,12 @@ python simple_slideshow.py
 Save pictures you like by pressing the `enter` key. Quit the slideshow with `escape`.
 ___
 
-
 To customize your slideshow you include arguments when running she scripts.
 
+```
 python get_reddit_images.py [how] [reddit_urls] [N_pictures]
 e.g.
-```
-python  get_reddit_images.py remove reddit_urls.csv 3
-```
+>>> python  get_reddit_images.py remove reddit_urls.csv 3
 
 how : str
     What to do with newly discovered images.
@@ -52,10 +47,8 @@ N_pictures : int
 
 
 python simple_slideshow.py [display_time] [random_order] [display_labels] [image_folder]
-```
-python simple_slideshow.py
-python simple_slideshow.py 5 False False static/archive
-```
+e.g.
+>>> python simple_slideshow.py 5 False False static/archive
 
 display_time : int
     Time in seconds to display each picture for. Default is 60.
@@ -71,7 +64,7 @@ display_labels : bool
 
 image_folder : str
     Path to images. Default is static/live-slideshow.
-
+```
 ___
 
 The `simple_slideshow` script can run continuously. The `reddit_urls.csv` file currently has URLs for the top daily content (as per the parameters at the end or each URL). As such, it can be run daily for new content. On Unix, this could be done with a cron job:
