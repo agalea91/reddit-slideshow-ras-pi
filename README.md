@@ -1,19 +1,16 @@
 # Reddit picture live slideshow
 
-Continuous slideshow of reddit pictures from your favorite subreddits. For your desktop or raspberry PI. Requires python 2 or 3 and the following external library dependencies:
- - shutil
- - requests
- - BeautifulSoup
- - Pillow
- - pyglet
-You may want to create a virtual environment to install them in. After downloading this repository, the installation can be done with pip. On Unix systems you can do
+Continuous slideshow of reddit pictures from your favorite subreddits. For your desktop or raspberry PI. Requires python 2 or 3 and the following external library dependencies: `shutil, requests, beautifulsoup4, Pillow, and pyglet`.
+ ```
+You may want to create a virtual environment to install them in. After [downloading this repository](https://github.com/agalea91/reddit-slideshow-ras-pi/archive/master.zip), the installation can be done with pip. On Unix systems you can do
 ```
-git clone (finish)
-cd (finish)
+git clone https://github.com/agalea91/reddit-slideshow-ras-pi
+cd reddit-slideshow-ras-pi
 pip install --upgrade -r requirement.txt
 ```
+If on Windows, you can install the libraries by navigating to the downloaded repository and running the final line above.
 
-The tool should be run in two steps. First navigate to the project directory and run
+The tool, which downloads pictures from reddit and then displays them in a slideshow, should be run in two steps. First navigate to the project directory and run
 ```
 python get_reddit_images.py
 ```
