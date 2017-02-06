@@ -25,7 +25,7 @@ python simple_slideshow.py
 Save pictures you like by pressing the `enter` key. Quit the slideshow with `escape`.
 ___
 
-To customize your slideshow you include arguments when running she scripts.
+To customize your slideshow you can include arguments when running she scripts.
 
 ```
 python get_reddit_images.py [how] [reddit_urls] [N_pictures]
