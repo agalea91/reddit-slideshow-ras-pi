@@ -1,4 +1,4 @@
-# Reddit picture live slideshow
+# Reddit pictures slideshow for Raspberry PI
 
 Continuous slideshow of reddit pictures from your favorite subreddits. For your desktop or raspberry PI. Requires python 2 or 3 and the following external library dependencies: `shutil, requests, beautifulsoup4, Pillow, and pyglet`.
 
